@@ -27,7 +27,7 @@ function buildUserDataScript(githubRegistrationToken, label) {
       `./config.sh --url https://github.com/${config.githubContext.owner}/${config.githubContext.repo} --token ${githubRegistrationToken} --labels ${label}`,
     ];
   }
-  userData.push('touch /tmp/TEST_FILE');
+  userData.push('echo ASDFASDFASDF');
   if (config.input.runAsUser) {
     userData.push(`chown -R ${config.input.runAsUser} ${config.input.runnerHomeDir}`);
   }
